@@ -4,3 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
+
+h1, h2, h3, a {
+  color: rgb(66, 29, 197);
+}
+
+a:hover, a:visited {
+  color: rgb(39, 15, 125);
+}

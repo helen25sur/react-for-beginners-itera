@@ -1,52 +1,31 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { faInstagram, faLinkedinIn, faTelegram } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
+
+import Main from './components/ui/main/Main';
+import Footer from './components/ui/footer/Footer';
+import Contacts from './components/contacts/Contacts';
+import SkillsList from './components/skills-list/SkillsList';
+import WorkingExperience from './components/working-experience/WorkingExperience';
+
 import details from "./data/details.json";
+import PersonalInfo from './components/personal-info/PersonalInfo';
 
 function App() {
+  const { name, autobiography, workingExperience, skills, photo, contacts } = details;
 
   return (
     <>
-      <main>
-        <h1>{details.name}</h1>
-        <p>{details.autobiography}</p>
-        <img width={"40%"} src={details.photo} alt={details.name} />
-        <h2>Working Experience</h2>
-        <p>
-          <span>I'm working as {details.workingExperience.name}</span> for <span>{details.workingExperience.years} {details.workingExperience.years === 1 ? "year" : "years"}</span>
-        </p>
-        <ul>
-          {details.skills.map(s => <li>
-            <span>{s.title}</span>: <span>{s.score}</span>
-          </li>)}
-        </ul>
-      </main>
-      <footer>
-        <ul>
-          <li>
-            <a href={`mailto:${details.contacts.email}`}>
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
-          </li>
-          <li>
-            <a href={details.contacts.instagram}>
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-          </li>
-          <li>
-            <a href={details.contacts.linkedin}>
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </a>
-          </li>
-          <li>
-            <a href={details.contacts.telegram}>
-              <FontAwesomeIcon icon={faTelegram} />
-            </a>
-          </li>
-        </ul>
-      </footer>
+      <Main>
 
+        <PersonalInfo name={name} autobiography={autobiography} photo={photo} />
+
+        <WorkingExperience workingExperience={workingExperience} />
+
+        <SkillsList skills={skills} />
+
+      </Main>
+      <Footer>
+        <Contacts contacts={contacts} />
+      </Footer>
     </>
   )
 }

@@ -1,0 +1,15 @@
+.skills-list {
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.skill-name {
+  text-decoration: underline;
+  color: rgb(40, 12, 117);
+}
+
+.skill-score {
+  font-weight: bold;
+}
