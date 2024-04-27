@@ -1,0 +1,27 @@
+{
+  "name": "Olena Surilova",
+  "autobiography": "As a Junior Front End Developer, I know HTML, CSS, SCSS, and JavaScript, and I am currently expanding my knowledge by learning Vue.js and Typescript. I am eager to further develop my skills in a collaborative environment with like-minded individuals who share my passion for web development.",
+  "photo": "./photo.jpg",
+  "hobbies": ["Reading", "Watching Movies"],
+  "workingExperience": {"years": 1, "name" :"Web Developer"},
+  "skills": [
+    {
+      "title": "html",
+      "score": "3.5"
+    },
+    {
+      "title": "css",
+      "score": "3.5"
+    },
+    {
+      "title": "js",
+      "score": "3"
+    }
+  ],
+  "contacts": {
+    "email": "fake@gmail.com",
+    "telegram": "https://t.me/surilova",
+    "instagram": "https://www.instagram.com/olena_sur26/",
+    "linkedin": "https://www.linkedin.com/in/olena-surilova-8aa66b122/"
+  }
+}
